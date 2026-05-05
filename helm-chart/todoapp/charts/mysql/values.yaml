@@ -1,0 +1,32 @@
+# values.yaml for mysql
+namespace: todoapp-ns
+image:
+  repository: mysql
+  tag: "8.0"
+replicaCount: 1
+resources:
+  requests:
+    memory: "512Mi"
+    cpu: "250m"
+  limits:
+    memory: "1Gi"
+    cpu: "500m"
+pvc:
+  requests:
+    storage: 2Gi
+affinity:
+  nodeAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: app
+              operator: In
+              values:
+                - mysql
+tolerations: []
+secrets:
+  data:
+    MYSQL_ROOT_PASSWORD: cm9vdHBhc3N3b3Jk
+    MYSQL_DATABASE: dG9kb2FwcA==
+    MYSQL_USER: dG9kb2Fwcw==
+    MYSQL_PASSWORD: cGFzc3dvcmQ=
