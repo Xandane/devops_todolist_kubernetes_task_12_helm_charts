@@ -9,6 +9,15 @@ spec:
   selector:
     matchLabels:
       app: {{ .Chart.Name }}
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        storageClassName: standard
+        resources:
+          requests:
+            storage: {{ .Values.pvc.requests.storage }}
   template:
     metadata:
       labels:

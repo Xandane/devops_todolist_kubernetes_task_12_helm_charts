@@ -26,7 +26,7 @@ affinity:
 tolerations: []
 secrets:
   data:
-    MYSQL_ROOT_PASSWORD: cm9vdHBhc3N3b3Jk
-    MYSQL_DATABASE: dG9kb2FwcA==
-    MYSQL_USER: dG9kb2Fwcw==
-    MYSQL_PASSWORD: cGFzc3dvcmQ=
+    MYSQL_ROOT_PASSWORD: rootpassword
+    MYSQL_DATABASE: todoapp
+    MYSQL_USER: todoapps
+    MYSQL_PASSWORD: password
