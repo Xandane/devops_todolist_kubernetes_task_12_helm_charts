@@ -13,3 +13,5 @@ kubectl get all,cm,secret,ing -A > output.log
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 kubectl apply -f metricsServer.yml  # якщо є цей файл
 kubectl get all,cm,secret,ing -A > output.log
+helm install todoapp ./helm-chart/todoapp --namespace todoapp-ns --create-namespace
+helm install todoapp .infrastructure/helm-chart/todoapp --namespace todoapp-ns --create-namespace

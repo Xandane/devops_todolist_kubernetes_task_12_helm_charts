@@ -1,5 +1,5 @@
 # Namespace
-namespace: todoapp-ns
+namespace: todoapp
 # Secrets
 secrets:
   DB_HOST: "mysql"
