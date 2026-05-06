@@ -34,5 +34,3 @@ secrets:
   MYSQL_USER: todoapps
   MYSQL_PASSWORD: password
 
-serviceAccount:
-  name: todoapp-sa
